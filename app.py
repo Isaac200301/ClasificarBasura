@@ -1,5 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
+import os
 
 # ------------------------------------
 # CONFIGURACIÓN DE LA APP
@@ -7,7 +8,7 @@ import google.generativeai as genai
 st.set_page_config(page_title="EcoGuía Pro", page_icon="♻️", layout="centered")
 
 # Pega tu API Key aquí (He mantenido la variable lista para que funcione)
-CLAVE_GOOGLE = "AIzaSyCak1VOzOHn2k__raT_O8Y0Z94NQyp2xaU" 
+CLAVE_GOOGLE = os.getenv("CLAVE_GOOGLE")
 genai.configure(api_key=CLAVE_GOOGLE)
 
 # ------------------------------------
